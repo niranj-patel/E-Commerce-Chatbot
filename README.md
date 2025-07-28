@@ -38,3 +38,8 @@ This chatbot currently supports two intents:
     ```bash
     streamlit run app/main.py
     ```
+1. Streamlit app will open in your browser. You can now interact with the chatbot.
+
+    ```bash
+    https://niranjpatel-ecommerce-chatbot.streamlit.app/
+    ```
