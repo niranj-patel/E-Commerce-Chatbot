@@ -7,3 +7,4 @@ semantic-router
 chromadb
 sentence_transformers
 pysqlite3
+pip=25.1.1
