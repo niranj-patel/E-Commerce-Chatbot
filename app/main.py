@@ -1,7 +1,16 @@
-# SQLite version fix for ChromaDB
+# SQLite version fix for ChromaDB - Robust approach
 import sys
-__import__('pysqlite3')
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+import os
+
+# Try to use pysqlite3-binary if available, otherwise use system sqlite3
+try:
+    __import__('pysqlite3')
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+    print("Using pysqlite3-binary for SQLite")
+except ImportError:
+    print("pysqlite3-binary not available, using system sqlite3")
+    # For local development, you might need to set this environment variable
+    os.environ['CHROMA_DB_IMPL'] = 'duckdb+parquet'
 
 import streamlit as st
 import logging
