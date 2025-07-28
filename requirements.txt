@@ -1,0 +1,9 @@
+streamlit
+pandas
+pandasql
+python-dotenv
+groq
+semantic-router
+chromadb
+sentence_transformers
+pysqlite3
