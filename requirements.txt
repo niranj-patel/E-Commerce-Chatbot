@@ -6,5 +6,4 @@ groq==0.30.0
 semantic-router== 0.0.20
 chromadb
 sentence_transformers
-pysqlite3
 pip==25.1.1
