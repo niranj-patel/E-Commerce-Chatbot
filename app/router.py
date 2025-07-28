@@ -1,4 +1,4 @@
-from semantic_router import Route, RouterConfig
+from semantic_router import Route
 from semantic_router.routers import SemanticRouter
 from semantic_router.encoders import HuggingFaceEncoder
 from semantic_router.index import LocalIndex
@@ -51,13 +51,9 @@ sql = Route(
     ]
 )
 
-# Create a local index
 index = LocalIndex()
 
-# Create router configuration
-router_config = RouterConfig()
-
-# Initialize the router with the index and auto_sync to initialize the index
+# Remove the unused router_config line
 router = SemanticRouter(
     routes=[faq, sql],
     encoder=encoder,
